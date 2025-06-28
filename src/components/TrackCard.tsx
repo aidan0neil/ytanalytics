@@ -1,4 +1,5 @@
 import { Music } from 'lucide-react';
+import { formatVideoDuration } from '@/utils/formatters';
 
 interface Track {
   id: string;
@@ -16,12 +17,6 @@ interface TrackCardProps {
 }
 
 export default function TrackCard({ track, onClick }: TrackCardProps) {
-  const formatDuration = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
-    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-  };
-
   return (
     <div 
       className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all cursor-pointer"
@@ -45,7 +40,7 @@ export default function TrackCard({ track, onClick }: TrackCardProps) {
           <p className="text-white/50 text-xs truncate">{track.album}</p>
         </div>
         <div className="text-right flex-shrink-0">
-          <div className="text-white/70 text-sm">{formatDuration(track.duration)}</div>
+          <div className="text-white/70 text-sm">{formatVideoDuration(track.duration)}</div>
           <div className="text-green-400 text-xs font-medium">{track.popularity}%</div>
         </div>
       </div>
