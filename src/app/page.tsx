@@ -286,7 +286,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 diagonal-lines">
+    <div className="min-h-screen bg-gradient-to-br from-red-400 to-red-600">
       {/* Header with black background */}
       <div className="bg-black/90 backdrop-blur-sm border-b border-white/10">
         <div className="p-6">

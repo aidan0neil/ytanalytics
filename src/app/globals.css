@@ -35,7 +35,7 @@ body {
 
 /* Diagonal pastel lines pattern */
 .diagonal-lines {
-  background: repeating-linear-gradient(
+  background-image: repeating-linear-gradient(
     45deg,
     rgba(255, 182, 193, 0.1) 0px,
     rgba(255, 182, 193, 0.1) 2px,
@@ -43,4 +43,18 @@ body {
     rgba(255, 255, 255, 0.1) 4px
   );
   background-size: 8px 8px;
+}
+
+/* Combined gradient and diagonal lines */
+.gradient-with-lines {
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 182, 193, 0.1) 0px,
+      rgba(255, 182, 193, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    ),
+    linear-gradient(to bottom right, #ef4444, #dc2626);
+  background-size: 8px 8px, 100% 100%;
 }

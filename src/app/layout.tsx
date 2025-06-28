@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
         <div className="min-h-screen bg-gradient-to-br from-green-900 via-black to-purple-900">
           {children}
         </div>
